@@ -2,10 +2,7 @@ package com.xylematic.flickrapp.compose
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.core.os.bundleOf
 import androidx.navigation.NavHostController
-import androidx.navigation.NavOptions
-import androidx.navigation.Navigator
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.xylematic.flickrapp.compose.screen.HomeScreen
@@ -24,7 +21,7 @@ fun FlickrNavGraph(
     ) {
         composable(
             route = Routing.Home.route
-        ) { navBackStackEntry ->
+        ) {
             HomeScreen(onPhotoClicked = {
                 navController.navigate(
                     Routing.PhotoDetail.createRoute(

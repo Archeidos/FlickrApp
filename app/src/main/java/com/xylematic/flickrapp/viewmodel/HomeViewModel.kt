@@ -1,18 +1,14 @@
 package com.xylematic.flickrapp.viewmodel
 
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
-import com.xylematic.flickrapp.api.FlickrService
 import com.xylematic.flickrapp.data.FlickrRepository
-import com.xylematic.flickrapp.data.FlickrRepositoryImpl
 import com.xylematic.flickrapp.data.PhotoItem
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.filterNotNull
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
 
 class HomeViewModel(
     // Replace with DI injection

@@ -22,6 +22,8 @@ val networkModule = module {
     single { provideRetrofit() }
 }
 
+val flickrModules = listOf(appModule, networkModule)
+
 fun provideRetrofit(): Retrofit {
     val logger = HttpLoggingInterceptor().apply { level = HttpLoggingInterceptor.Level.BASIC }
 
@@ -35,5 +37,3 @@ fun provideRetrofit(): Retrofit {
         .client(client)
         .build()
 }
-
-val flickrModules = listOf(appModule, networkModule)

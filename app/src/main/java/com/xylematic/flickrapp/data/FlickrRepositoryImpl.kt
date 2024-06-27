@@ -16,6 +16,7 @@ class FlickrRepositoryImpl(val flickrService: FlickrService) : FlickrRepository 
                 ).items
                 Result.success(photoItemList)
             } catch (e: Exception) {
+                // Should ideally return results to UI to display errors
                 e.printStackTrace()
                 Result.failure(e)
             }

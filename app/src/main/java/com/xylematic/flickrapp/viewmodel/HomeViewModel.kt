@@ -29,6 +29,7 @@ class HomeViewModel(
         updateSearchResults(defaultSearchText)
     }
 
+    /** Ideally would return results to UI for error messaging **/
     fun updateSearchResults(searchText: String) = viewModelScope.launch {
         _isLoading.value = true
         _photos.value = flickrRepository.searchPhotos(searchText).getOrNull()

@@ -101,6 +101,7 @@ fun PhotoDetailScreen(
                 Spacer(modifier = Modifier.height(8.dp))
                 publishedDate?.let {
                     Text(
+                        //Needs formatting
                         text = "Published on: $it",
                         style = MaterialTheme.typography.bodyMedium,
                         textAlign = TextAlign.Center

@@ -51,10 +51,10 @@ import org.koin.androidx.compose.koinViewModel
 @Composable
 fun HomeScreen(
     modifier: Modifier = Modifier,
+    viewModel: HomeViewModel = koinViewModel(),
     onPhotoClicked: (PhotoItem) -> Unit = {},
 ) {
 
-    val viewModel: HomeViewModel = koinViewModel()
     val searchText = remember { mutableStateOf(viewModel.searchText.value) }
     var isSearchBoxVisible by remember { mutableStateOf(false) }
 

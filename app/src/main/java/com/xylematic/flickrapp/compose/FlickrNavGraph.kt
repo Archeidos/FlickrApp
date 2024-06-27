@@ -38,6 +38,7 @@ fun FlickrNavGraph(
             route = Routing.PhotoDetail.route,
             arguments = Routing.PhotoDetail.navArgs
         ) { navBackStackEntry ->
+            // Bundle?
             val title: String = navBackStackEntry.arguments?.getString("title") ?: ""
             val imageUrl: String = navBackStackEntry.arguments?.getString("imageUrl") ?: ""
             val desc: String = navBackStackEntry.arguments?.getString("desc") ?: ""
